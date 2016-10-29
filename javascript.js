@@ -56,9 +56,7 @@ angular.module('portalApp')
 		$scope.portalHelpers.showView('lostFoundDetails.html', 2);
 	};
     
-    $scope.showSubmit = function() {
-     var submitPopup = $ionicPopup.alert({
-       title: Thank-You.,
-       template: 'Submission received and posted.'
-     });
+    $scope.submit = function() {
+     alert("Your lost item has been added to the lost and found.");
+   };
 }]);
