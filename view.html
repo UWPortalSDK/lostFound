@@ -118,6 +118,15 @@
     		</button>
         </wc>    
     </wr>
+    <wr ng-repeat="location in lostLocations">
+			
+        <span  class="badge badge-success locations">
+            {{location[1]}} ({{location[0]}})
+        	<button class="deleteButton" ng-click="delete()">
+      			X
+    		</button>
+        </span><br />
+    </wr>
     <wr>
         Contact Info:
     </wr>
