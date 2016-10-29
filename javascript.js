@@ -5,32 +5,38 @@ angular.module('portalApp')
 	$scope.items = [
 		{
 			title:'Honda Car Keys',
-			tags: ['Cool'],
-			details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			location: ['EIT', ,],
+            date: [new Date(1477756681984)],
+			details: 'Also comes with 6 other keys and a gorilla keychain'
 		},
 		{
 			title:'Winter Coat',
-			tags: ['tag D', 'tag E', 'tag F'],
-			details: 'Mauris cursus, sapien et malesuada ultrices, purus sapien iaculis tellus, quis semper magna est at leo.'
+			location: ['M3'],
+            date: [new Date(1477756681984)],
+			details: "Has a fur lined hood, and a patch that says something about Calgary. Also has 3 pockets on the inside."
 		},
 		{
 			title:'Blue Metal Water Bottle',
-			tags: ['tag A', 'tag H'],
-			details: 'Donec id quam eu odio feugiat sagittis. Duis a tempus neque. Praesent elementum quis ante quis commodo. Sed tincidunt aliquet dolor sit amet laoreet. '
+			location: ['RCH'],
+            date: [new Date(14777566819840)],
+			details: 'Has a Waterloo Crest on it ...  and a lot of scratches on the bottom.'
 		},
 		{
 			title:'Plastic Tupperware Bowl',
-			tags: ['tag I'],
+			location: ['E5'],
+            date: [0],
 			details: 'Proin sem quam, rutrum id ante id, scelerisque tempor quam. Curabitur pharetra turpis at sem placerat, non vehicula ligula tincidunt.'
 		},
 		{
 			title:'Plaid Scarf',
-			tags: ['tag C', 'tag K', 'tag B'],
+			location: ['E5'],
+            date: [0],
 			details: 'Mauris nec ultricies metus. Cras et dictum justo. Nam a ullamcorper dolor. Cras fringilla metus vel facilisis vehicula.'
 		},
 		{
 			title:'Waterloo Crested Binder',
-			tags: ['tag A', 'tag B', 'tag C'],
+			location: ['E5'],
+            date: [0],
 			details: 'Curabitur scelerisque lorem risus, in luctus orci hendrerit non. Praesent quis tellus dapibus dolor consectetur volutpat.'
 		}
 	];
