@@ -57,6 +57,6 @@ angular.module('portalApp')
 	};
     
     $scope.submit = function() {
-     alertService.alert("Your lost item has been added to the lost and found.");
+     alertService.alert("Your lost item has been added to the lost and found list.");
    };
 }]);
