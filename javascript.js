@@ -55,4 +55,10 @@ angular.module('portalApp')
 		$scope.detailsItem = item;		
 		$scope.portalHelpers.showView('lostFoundDetails.html', 2);
 	};
+    
+    $scope.showSubmit = function() {
+     var submitPopup = $ionicPopup.alert({
+       title: Thank-You.,
+       template: 'Submission received and posted.'
+     });
 }]);
