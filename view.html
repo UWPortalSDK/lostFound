@@ -50,39 +50,13 @@
     </wr>
     <wr>
         <wc>
-            Details: 
-        </wc>    
-        <wc>
             <div class="pDetails">{{detailsItem.details}}</div>
         </wc>
-    </wr>
-    <wr>
-        <wc>
-            Name: 
-        </wc>    
-        <wc>
-            <div class="Name">{{detailsItem.name}}</div>
-        </wc>    
-    </wr>
-    <wr>
-        <wc>
-            Email: 
-        </wc>    
-        <wc>
-            <div class="Email">{{detailsItem.email}}</div>
-        </wc>    
-    </wr>
-    <wr>
-        <wc>
-            Number: 
-        </wc>    
-        <wc>
-            <div class="Number">{{detailsItem.number}}</div>
-        </wc>    
     </wr>
 </script>
 
 <script type="text/ng-template" id="lostFoundlostForm.html">
+    
     <wr>
         <h1>Lost Item Info:</h1>
     </wr>    
@@ -126,34 +100,36 @@
             <input
                    type="time" name="Final Time" />
         </wc>
-    </wr>    
-    <wr>
-        Where do you think you lost it (general area)?
-    </wr>
-    <wr>
-        <wc>
-        	<select>
-  				<option value="acw">Accelerator Centre Waterloo (ACW)</option>
-  				<option value="al">Arts Lecture Hall (AL)</option>
-  				<option value="arc">School of Architecture (ARC)</option>
-  				<option value="b1">Biology 1 (B1)</option>
-            </select>
-        </wc>
-        <wc>
-            <button class="plusButton" ng-click="plus()">
-      			+
-    		</button>
-        </wc>    
-    </wr>
-    <wr ng-repeat="location in lostLocations">
-			
-        <span  class="badge badge-success locations">
-            {{location[1]}} ({{location[0]}})
-        	<button class="deleteButton" ng-click="delete()">
-      			X
-    		</button>
-        </span><br />
-    </wr>
+    </wr> 
+    <form class="form-inline" ng-submit="appendLocation()">
+        <wr>
+            Where do you think you lost it (general area)?
+        </wr>
+        <wr>
+            <wc>
+                <select>
+                    <option value="acw">Accelerator Centre Waterloo (ACW)</option>
+                    <option value="al">Arts Lecture Hall (AL)</option>
+                    <option value="arc">School of Architecture (ARC)</option>
+                    <option value="b1">Biology 1 (B1)</option>
+                </select>
+            </wc>
+            <wc>
+                <button class="plusButton" ng-click="plus()">
+                    +
+                </button>
+            </wc>    
+        </wr>
+        <wr ng-repeat="location in lostLocations">
+
+            <span  class="badge badge-success locations">
+                {{location[1]}} ({{location[0]}})
+                <button class="deleteButton" ng-click="delete()">
+                    X
+                </button>
+            </span><br />
+        </wr>
+    </form>
     <wr>
         Contact Info:
     </wr>
