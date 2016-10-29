@@ -1,17 +1,14 @@
 angular.module('portalApp')
 .controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
-	$scope.lostLocations = [["ACW", "Accelerator Centre Waterloo"],
-                            ["ACW", "Accelerator Centre Waterloo"],
-                            ["ACW", "Accelerator Centre Waterloo"],
-                            ["ACW", "Accelerator Centre Waterloo"],
-                           ];
+	
 	// mock data
 	$scope.items = [
 		{
 			title:'Honda Car Keys',
 			location: ['EIT','DC',],
             date: [new Date(1477756681984), 3291032021],
-			details: 'Also comes with 6 other keys and a gorilla keychain'
+			details: 'Also comes with 6 other keys and a gorilla keychain',
+            name: 'Some'
 		},
 		{
 			title:'Winter Coat',
@@ -62,9 +59,5 @@ angular.module('portalApp')
     
     $scope.submit = function() {
      alertService.alert("Your lost item has been added to the lost and found list.");
-   };
-    
-    $scope.plus = function() {
-     
    };
 }]);
