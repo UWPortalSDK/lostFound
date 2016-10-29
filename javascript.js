@@ -1,6 +1,10 @@
 angular.module('portalApp')
 .controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
-	
+	$scope.lostLocations = [["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                           ];
 	// mock data
 	$scope.items = [
 		{
