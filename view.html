@@ -21,17 +21,32 @@
 	<wr>
 		<wc><h2>{{detailsItem.title}}</h2></wc>
 	</wr>
-	<wr><wc>
-        <b>Possible Locations:</b>
-       	<span ng-repeat= "location in detailsItem.location" class="badge badge-balanced">
-        	{{location}}
-    	</span>
-    </wc></wr>
-    <wr><wc>
-        <div class="pDetails">
-            <b>Possible Time:</b>
-            <span> {{ item.date[0] | date:'MM/dd/yy  }}{{item.details.length > 50 ? '...' : ''}} </span>
-            {{detailsItem.details}}
-        </div>
-    </wc></wr>
+	<wr><wc><span ng-repeat= "location in detailsItem.location" class="badge badge-balanced">{{tag}}</span></wc></wr>
+	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
+</script>
+
+<script type="text/ng-template" id="lostFoundlostForm.html">
+    <wr>
+        <h1>Lost Form</h1>
+    </wr>    
+	<wr>
+        <wc>
+        <wi name="star"></wi>
+        </wc>
+        <wc fill>
+            Enter info about item lost:
+        </wc>
+        <wc>
+        <wi name="star"></wi>
+        </wc>
+    </wr>
+    <wr>
+        <wc fill>
+            What is the item?
+        </wc>
+        <wc>
+            <input
+            type="text" />
+        </wc>
+    </wr>          
 </script>
