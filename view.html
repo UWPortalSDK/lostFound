@@ -1,66 +1,86 @@
 <!-- Primary template that will get shown when widget loads -->
+<script type="text/ng-template" id="lostFoundHome.html">
+    <wr fill clickable ng-click="goTo('lostFoundlostForm')">
+        <wc fill> <span>Lost Something?</span> </wc>
+        <wc>
+            <wi name="angle-right"></wi>
+        </wc>
+    </wr>
+    <wr fill clickable ng-click="goTo('lostList')">
+        <wc fill> <span>Found Something?</span> </wc>
+        <wc>
+            <wi name="angle-right"></wi>
+        </wc>
+    </wr>
+</script>
 
+<script type="text/ng-template" id="lostFoundMain.html">
+    <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+        <widget-cell fill>
+            <span class="itemName">{{item.title}}</span>
+            <span class="badge badge-balanced"> {{ item.location[0] }} - {{item.date[0] | date:'MM/dd/yy'}} </span>
+            <br/>
+            <b>Details:</b><span> {{item.details | limitTo: 50}}{{item.details.length > 50 ? '...' : ''}} </span>
+        </widget-cell>
+        <widget-cell>
+            <widget-icon name="angle-right"></widget-icon>
+        </widget-cell>
 
-<script type="text/ng-template" id="lostFoundMain.html"> 
-	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
-		<widget-cell fill>
-			<span class="itemName">{{item.title}}</span>
-			 <span class="badge badge-balanced"> {{ item.location[0] }} - {{item.date[0] | date:'MM/dd/yy'}} </span>
-             <br/>
-             <b>Details:</b><span> {{item.details | limitTo: 50}}{{item.details.length > 50 ? '...' : ''}} </span>
-		</widget-cell>
-		<widget-cell>
-			<widget-icon name="angle-right"></widget-icon>
-		</widget-cell>
+    </widget-row>
 
-	</widget-row>
-    
 </script>
 
 <!-- This template gets shown when user clicks one of the items in the list -->
-<script type="text/ng-template" id="lostFoundDetails.html"> 
-	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-	<wr>
-		<wc><h2>{{detailsItem.title}}</h2></wc>
-	</wr>
-	<wr><wc><span ng-repeat= "location in detailsItem.location" class="badge badge-balanced">
+<script type="text/ng-template" id="lostFoundDetails.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>
+            <h2>{{detailsItem.title}}</h2></wc>
+    </wr>
+    <wr>
+        <wc><span ng-repeat="location in detailsItem.location" class="badge badge-balanced">
         {{location}}
-    </span></wc></wr>
-	<wr><wc><span>
+    </span></wc>
+    </wr>
+    <wr>
+        <wc><span>
         <b>It was lost around: </b>
         {{detailsItem.date[0] | date:'MMM d, y h:mm a'}} - {{detailsItem.date[1] | date:'MMM d, y h:mm a'}}
-    </span></wc></wr>
-	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
+    </span></wc>
+    </wr>
+    <wr>
+        <wc>
+            <div class="pDetails">{{detailsItem.details}}</div>
+        </wc>
+    </wr>
 </script>
 
 <script type="text/ng-template" id="lostFoundlostForm.html">
     <wr>
         <h1>Lost Form</h1>
-    </wr>    
-	<wr>
+    </wr>
+    <wr>
         <wc>
-        <wi name="star"></wi>
+            <wi name="star"></wi>
         </wc>
         <wc fill>
             <h2>Enter info about item lost:</h2>
         </wc>
         <wc>
-        <wi name="star"></wi>
+            <wi name="star"></wi>
         </wc>
     </wr>
     <wr>
         What is the item?
-    </wr>    
+    </wr>
     <wr>
-        <input
-            type="text" />
+        <input type="text" />
     </wr>
     <wr>
         Description of the item.
     </wr>
     <wr>
-        <input
-            type="text" />
+        <input type="text" />
     </wr>
     <wr>
         When did you notice you lost it (day, time)?
@@ -70,46 +90,36 @@
             Day:
         </wc>
         <wc>
-            <input
-                type="date" name="Date" />
-        </wc>    
+            <input type="date" name="bday" />
+        </wc>
     </wr>
     <wr>
         <wc>
             Time Range:
         </wc>
         <wc>
-            <input
-                   type="time" name="Initial Time" />
-        </wc>
-        <wc>
-            <input
-                   type="time" name="Final Time" />
-        </wc>
-    </wr>    
-    <wr>
-        Where do you think you lost it (general area)?
-    </wr>
-    <wr>
-        <input
-            type="text" />
-    </wr>
-    <wr>
-        Contact Info:
-    </wr>
-    <wr>
-        <wc>
-            Cell#: *
-        </wc>
-        <wc>
-            <input
-            type="text" />
-        </wc>
-    </wr>
-    <wr>
-        * - not required.
-    </wr>
-    <wr>
-        <input type="submit" value="Submit" />
-    </wr>    
+
+            <wr>
+                Where do you think you lost it (general area)?
+            </wr>
+            <wr>
+                <input type="text" />
+            </wr>
+            <wr>
+                Contact Info:
+            </wr>
+            <wr>
+                <wc>
+                    Cell#: *
+                </wc>
+                <wc>
+                    <input type="text" />
+                </wc>
+            </wr>
+            <wr>
+                * - not required.
+            </wr>
+            <wr>
+                <input type="submit" value="Submit" />
+            </wr>
 </script>
