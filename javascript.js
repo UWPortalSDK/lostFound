@@ -78,5 +78,6 @@ angular.module('portalApp')
      alertService.alert("Your lost item has been added to the lost and found list.");
    };
    	$scope.appendLocation = function(){
+        
     }
 }]);
