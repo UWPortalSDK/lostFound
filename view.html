@@ -57,23 +57,30 @@
 
 <script type="text/ng-template" id="lostFoundlostForm.html">
     <wr>
-        <h1>Lost Item Info:</h1>
-    </wr>    
-	<wr>
+        <h1>Lost Form</h1>
+    </wr>
+    <wr>
+        <wc>
+            <wi name="star"></wi>
+        </wc>
+        <wc fill>
+            <h2>Enter info about item lost:</h2>
+        </wc>
+        <wc>
+            <wi name="star"></wi>
+        </wc>
     </wr>
     <wr>
         What is the item?
-    </wr>    
+    </wr>
     <wr>
-        <input
-            type="text" />
+        <input type="text" />
     </wr>
     <wr>
         Description of the item.
     </wr>
     <wr>
-        <input
-            type="text" />
+        <input type="text" />
     </wr>
     <wr>
         When did you notice you lost it (day, time)?
@@ -83,49 +90,36 @@
             Day:
         </wc>
         <wc>
-            <input
-                type="date" name="Date" />
-        </wc>    
-    </wr>
-    <wr>
-        <wc>
-            Time Range: *
-        </wc>
-        <wc>
-            <input
-                   type="time" name="Initial Time" />
-        </wc>
-        <wc>
-            <input
-                   type="time" name="Final Time" />
-        </wc>
-    </wr>    
-    <wr>
-        Where do you think you lost it (general area)?
-    </wr>
-    <wr>
-        <input
-            type="text" />
-    </wr>
-    <wr>
-        Contact Info:
-    </wr>
-    <wr>
-        <wc>
-            Cell#: **
-        </wc>
-        <wc>
-            <input
-            type="text" />
+            <input type="date" name="bday" />
         </wc>
     </wr>
     <wr>
-        * - Second time is not required.
-    </wr>
-    <wr>
-        ** - not required (recommended).
-    </wr>    
-    <wr>
-        <input type="submit" value="Submit" />
-    </wr>    
+        <wc>
+            Time Range:
+        </wc>
+        <wc>
+
+            <wr>
+                Where do you think you lost it (general area)?
+            </wr>
+            <wr>
+                <input type="text" />
+            </wr>
+            <wr>
+                Contact Info:
+            </wr>
+            <wr>
+                <wc>
+                    Cell#: *
+                </wc>
+                <wc>
+                    <input type="text" />
+                </wc>
+            </wr>
+            <wr>
+                * - not required.
+            </wr>
+            <wr>
+                <input type="submit" value="Submit" />
+            </wr>
 </script>
