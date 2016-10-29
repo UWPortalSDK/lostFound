@@ -1,6 +1,6 @@
 angular.module('portalApp')
 .controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
-	
+	$scope.
 	// mock data
 	$scope.items = [
 		{
@@ -78,6 +78,6 @@ angular.module('portalApp')
      alertService.alert("Your lost item has been added to the lost and found list.");
    };
    	$scope.plus = function(){
-        
+        console.log(document.getElementById("location").value);
     }
 }]);
