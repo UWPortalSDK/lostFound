@@ -1,6 +1,6 @@
 angular.module('portalApp')
 .controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
-	$scope.lostLocations = [];
+	
 	// mock data
 	$scope.items = [
 		{
