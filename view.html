@@ -21,7 +21,9 @@
 	<wr>
 		<wc><h2>{{detailsItem.title}}</h2></wc>
 	</wr>
-	<wr><wc><span ng-repeat= "location in detailsItem.location" class="badge badge-balanced">{{tag}}</span></wc></wr>
+	<wr><wc><span ng-repeat= "location in detailsItem.location" class="badge badge-balanced">
+        {{location}}
+    </span></wc></wr>
 	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
 </script>
 
