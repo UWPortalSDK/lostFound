@@ -12,3 +12,11 @@
     background-color: #BDE5F8 !important;
     color: black !important;
 }
+.deleteButton{
+	line-height: 1;
+    font-size: 0.5;
+    float: right;
+    display: inline-block;
+    background: none;
+    border: none;
+}
