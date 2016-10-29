@@ -1,5 +1,5 @@
 angular.module('portalApp')
-.controller('lostFoundCtrl', ['$scope', function ($scope) {
+.controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
 	
 	// mock data
 	$scope.items = [
@@ -57,6 +57,6 @@ angular.module('portalApp')
 	};
     
     $scope.submit = function() {
-     alert("Your lost item has been added to the lost and found.");
+     alertService.alert("Your lost item has been added to the lost and found.");
    };
 }]);
