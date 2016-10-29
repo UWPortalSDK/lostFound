@@ -78,7 +78,14 @@ angular.module('portalApp')
      alertService.alert("Your lost item has been added to the lost and found list.");
    };
    	$scope.plus = function(){
-        $scope.lostLocations.push([document.getElementById("location").value.split(" ", 1)[0], document.getElementById("location").value.split(" ")[1].split("_").join(" ") ])
-    	console.log($scope.lostLocations);
+        var location = [document.getElementById("location").value.split(" ", 1)[0], document.getElementById("location").value.split(" ")[1].split("_").join(" ") ] 
+        //test1 = $scope.lostLocations.toString()
+        //test2 = location.toString();
+        if($scope.lostLocations.toString().indexOf(location.toString()) == -1){
+            $scope.lostLocations.push(location);
+        }
+    	console.log($scope.lostLocations.toString());
+        console.log(location.toString());
+       
     }
 }]);
