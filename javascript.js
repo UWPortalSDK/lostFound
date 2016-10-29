@@ -43,7 +43,11 @@ angular.module('portalApp')
 	
 	// Show main view in the first column as soon as controller loads
 	//$scope.portalHelpers.showView('lostFoundMain.html', 1);
-    $scope.portalHelpers.showView('lostFoundlostForm.html', 1);
+    $scope.portalHelpers.showView('lostFoundHome.html', 1);
+    //$scope.portalHelpers.showView('lostFoundlostForm.html', 1);
+	$scope.goTo = function(where){
+    	$scope.portalHelpers.showView(where + '.html', 2);
+    }
 	
 	// This function gets called when user clicks an item in the list
 	$scope.showDetails = function(item){
