@@ -24,8 +24,9 @@
 	<wr><wc><span ng-repeat= "location in detailsItem.location" class="badge badge-balanced">
         {{location}}
     </span></wc></wr>
-    <wr><wc><span>
-        <b>It was lost around: </b>{{detailsItem.date[0] | date:'MMM d, y h:mm a'}} - {{detailsItem.date[1] | date:'MMM d, y  date:'MMM d, y h:mm a'}}
+	<wr><wc><span>
+        <b>It was lost around: </b>
+        {{detailsItem.date[0] | date:'MMM d, y h:mm a'}} - {{detailsItem.date[1] | date:'MMM d, y h:mm a'}}
     </span></wc></wr>
 	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
 </script>
@@ -39,7 +40,7 @@
         <wi name="star"></wi>
         </wc>
         <wc fill>
-            <h2>Enter info about item lost:</h2>
+            Enter info about item lost:
         </wc>
         <wc>
         <wi name="star"></wi>
@@ -53,52 +54,5 @@
             <input
             type="text" />
         </wc>
-    </wr>
-    <wr>
-        <wc fill>
-            Description of item.
-        </wc>
-        <wc>
-            <input
-            type="text" />
-        </wc>
-    </wr>
-    <wr>
-        <wc fill>
-            When did you notice you lost it (day, time)?
-        </wc>
-        <wc>
-            <input
-            type="text" />
-        </wc>
-    </wr>
-    <wr>
-        <wc fill>
-            Where do you think you lost it (general area)?
-        </wc>
-        <wc>
-            <input
-            type="text" />
-        </wc>
-    </wr>
-    <wr>
-        <wc fill>
-            Contact Info:
-        </wc>
-        <wc>
-            <input
-            type="text" 
-            placeholder="Name"/>
-        </wc>
-        <wc>
-            <input
-            type="text" 
-            placeholder="Email"/>
-        </wc>
-        <wc>
-            <input
-            type="text" 
-            placeholder="Cell #"/>
-        </wc>
-    </wr>        
+    </wr>          
 </script>
