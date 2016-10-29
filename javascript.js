@@ -6,7 +6,7 @@ angular.module('portalApp')
 		{
 			title:'Honda Car Keys',
 			location: ['EIT','DC',],
-            date: [new Date(1477756681984)],
+            date: [new Date(1477756681984), 3291032021],
 			details: 'Also comes with 6 other keys and a gorilla keychain'
 		},
 		{

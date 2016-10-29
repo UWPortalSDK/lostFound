@@ -25,7 +25,7 @@
         {{location}}
     </span></wc></wr>
     <wr><wc><span>
-        {{item.date[0] | date:'MM/dd/yy h:mma'}} - {{item.date[1] | date:'MM/dd/yy h:mma'}}
+        <b>It was lost around: </b>{{detailsItem.date[0] | date:'MMM d, y h:mm a'}} - {{detailsItem.date[1] | date:'MMM d, y  date:'MMM d, y h:mm a'}}
     </span></wc></wr>
 	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
 </script>
