@@ -5,12 +5,15 @@
 			<span class="itemName">{{item.title}}</span>
 			<span ng-repeat= "tag in item.tags" class="label label-success">
 				{{tag}}
-			</span>
+			</span> <br/>
+            <b>Details:</b><span> {{item.details | limitTo: 50}}{{item.details.length > 50 ? '...' : ''}} </span>
 		</widget-cell>
 		<widget-cell>
 			<widget-icon name="angle-right"></widget-icon>
 		</widget-cell>
+
 	</widget-row>
+    
 </script>
 
 <!-- This template gets shown when user clicks one of the items in the list -->
