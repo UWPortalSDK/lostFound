@@ -1,4 +1,4 @@
-.label{
+.label, .badge{
 	margin-right: 5px;
-    display: inline-block !important;
+    display: inline-block;
 }
