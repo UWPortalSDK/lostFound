@@ -1,6 +1,10 @@
 angular.module('portalApp')
 .controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
-	
+	$scope.lostLocations = [["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                           ];
 	// mock data
 	$scope.items = [
 		{
@@ -58,5 +62,9 @@ angular.module('portalApp')
     
     $scope.submit = function() {
      alertService.alert("Your lost item has been added to the lost and found list.");
+   };
+    
+    $scope.plus = function() {
+     
    };
 }]);
