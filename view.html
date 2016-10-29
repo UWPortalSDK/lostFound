@@ -47,63 +47,61 @@
         <b>It was lost around: </b>
         {{detailsItem.date[0] | date:'MMM d, y h:mm a'}} - {{detailsItem.date[1] | date:'MMM d, y h:mm a'}}
     </span></wc>
-    </wr> 
+    </wr>
     <wr>
         <wc>
-            Details: 
-        </wc>    
+            Details:
+        </wc>
         <wc>
             <div class="pDetails">{{detailsItem.details}}</div>
         </wc>
     </wr>
     <wr>
         <b>Contact info of owner: </b>
-    </wr>   
+    </wr>
     <wr>
         <wc>
-            Name: 
-        </wc>    
+            Name:
+        </wc>
         <wc fill class="info">
             <div class="Name">{{detailsItem.name}}</div>
-        </wc>    
+        </wc>
     </wr>
     <wr>
         <wc>
-            Email: 
-        </wc>    
+            Email:
+        </wc>
         <wc fill class="info">
             <div class="Email">{{detailsItem.email}}</div>
-        </wc>    
+        </wc>
     </wr>
     <wr>
         <wc>
-            Number: 
-        </wc>    
-        <wc fil class="info"l>
+            Number:
+        </wc>
+        <wc fil class="info" l>
             <div class="Number">{{detailsItem.number || "N/A" }}</div>
-        </wc>    
+        </wc>
     </wr>
 </script>
 
 <script type="text/ng-template" id="lostFoundlostForm.html">
     <wr>
         <h1>Lost Item Info:</h1>
-    </wr>    
-	<wr>
+    </wr>
+    <wr>
     </wr>
     <wr>
         What is the item?
-    </wr>    
+    </wr>
     <wr>
-        <input
-            type="text" />
+        <input type="text" />
     </wr>
     <wr>
         Description of the item.
     </wr>
     <wr>
-        <input
-            type="text" />
+        <input type="text" />
     </wr>
     <wr>
         When did you notice you lost it (day, time)?
@@ -113,49 +111,47 @@
             Day:
         </wc>
         <wc>
-            <input
-                type="date" name="Date" />
-        </wc>    
+            <input type="date" name="Date" />
+        </wc>
     </wr>
     <wr>
         <wc>
             Time Range: *
         </wc>
         <wc>
-            <input
-                   type="time" name="Initial Time" />
+            <input type="time" name="Initial Time" />
         </wc>
         <wc>
-            <input
-                   type="time" name="Final Time" />
+            <input type="time" name="Final Time" />
         </wc>
-    </wr>    
+    </wr>
     <wr>
         Where do you think you lost it (general area)?
     </wr>
     <wr>
         <wc>
-        	<select id="location">
-  				<option value="ACW Accelerator_Centre_Waterloo">Accelerator Centre Waterloo (ACW)</option>
-  				<option value="AL Arts_Lecture_Hall">Arts Lecture Hall (AL)</option>
-  				<option value="ARC School_of_Architecture">School of Architecture (ARC)</option>
-  				<option value="B1 Biology_1">Biology 1 (B1)</option>
+            <select id="location">
+                <option value="ACW Accelerator_Centre_Waterloo">Accelerator Centre Waterloo (ACW)</option>
+                <option value="AL Arts_Lecture_Hall">Arts Lecture Hall (AL)</option>
+                <option value="ARC School_of_Architecture">School of Architecture (ARC)</option>
+                <option value="B1 Biology_1">Biology 1 (B1)</option>
             </select>
         </wc>
         <wc>
             <button class="plusButton" ng-click="plus()">
-      			+
-    		</button>
-        </wc>    
+                +
+            </button>
+        </wc>
     </wr>
     <wr ng-repeat="location in lostLocations">
-			
-        <span  class="badge badge-success locations">
+
+        <span class="badge badge-success locations">
             {{location[1]}} ({{location[0]}})
         	<button class="deleteButton" ng-click="delete()">
       			X
     		</button>
-        </span><br />
+        </span>
+        <br />
     </wr>
     <wr>
         Contact Info:
@@ -165,8 +161,7 @@
             Cell#: **
         </wc>
         <wc>
-            <input
-            type="text" />
+            <input type="text" />
         </wc>
     </wr>
     <wr>
@@ -174,10 +169,10 @@
     </wr>
     <wr>
         ** - not required (recommended).
-    </wr>    
+    </wr>
     <wr>
         <button class="submitButton" ng-click="submit()">
-      Submit
-    	</button>
-    </wr>    
+            Submit
+        </button>
+    </wr>
 </script>
