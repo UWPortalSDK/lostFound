@@ -5,7 +5,7 @@ angular.module('portalApp')
 	$scope.items = [
 		{
 			title:'Honda Car Keys',
-			location: ['EIT', ,],
+			location: ['EIT','DC',],
             date: [new Date(1477756681984)],
 			details: 'Also comes with 6 other keys and a gorilla keychain'
 		},
