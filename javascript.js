@@ -78,6 +78,7 @@ angular.module('portalApp')
      alertService.alert("Your lost item has been added to the lost and found list.");
    };
    	$scope.plus = function(){
-        $scope.lostLocations.append([document.getElementById("location").value.split(" ")[0], document.getElementById("location").value.split(" ")[1] ])
+        $scope.lostLocations.push([document.getElementById("location").value.split(" ", 2)[0], document.getElementById("location").value.split(" ", 2)[1] ])
+    	console.log($scope.lostLocations);
     }
 }]);
