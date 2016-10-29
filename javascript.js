@@ -1,61 +1,47 @@
 angular.module('portalApp')
 .controller('lostFoundCtrl', ['$scope', 'alertService', function ($scope, alertService) {
-	
+	$scope.lostLocations = [["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                            ["ACW", "Accelerator Centre Waterloo"],
+                           ];
 	// mock data
 	$scope.items = [
 		{
 			title:'Honda Car Keys',
 			location: ['EIT','DC',],
             date: [new Date(1477756681984), 3291032021],
-			details: 'Also comes with 6 other keys and a gorilla keychain',
-            name: 'Some guy',
-            email: 'someguy@uwaterloo.ca',
-            number: null,
+			details: 'Also comes with 6 other keys and a gorilla keychain'
 		},
 		{
 			title:'Winter Coat',
 			location: ['M3'],
             date: [new Date(1477756681984), 1],
-			details: "Has a fur lined hood, and a patch that says something about Calgary. Also has 3 pockets on the inside.",
-			name: 'Some guy',
-            email: 'someguy@uwaterloo.ca',
-            number: '(222)123-4567',
-        },
+			details: "Has a fur lined hood, and a patch that says something about Calgary. Also has 3 pockets on the inside."
+		},
 		{
 			title:'Blue Metal Water Bottle',
 			location: ['RCH'],
             date: [new Date(14777566819840), 2],
-			details: 'Has a Waterloo Crest on it ...  and a lot of scratches on the bottom.',
-            name: 'Some guy',
-            email: 'someguy@uwaterloo.ca',
-            number: '(222)123-4567',
+			details: 'Has a Waterloo Crest on it ...  and a lot of scratches on the bottom.'
 		},
 		{
 			title:'Plastic Tupperware Bowl',
 			location: ['E5'],
             date: [0, 3],
-			details: 'Proin sem quam, rutrum id ante id, scelerisque tempor quam. Curabitur pharetra turpis at sem placerat, non vehicula ligula tincidunt.',
-            name: 'Some guy',
-            email: 'someguy@uwaterloo.ca',
-            number: '(222)123-4567',
+			details: 'Proin sem quam, rutrum id ante id, scelerisque tempor quam. Curabitur pharetra turpis at sem placerat, non vehicula ligula tincidunt.'
 		},
 		{
 			title:'Plaid Scarf',
 			location: ['E5'],
             date: [0, 2],
-			details: 'Mauris nec ultricies metus. Cras et dictum justo. Nam a ullamcorper dolor. Cras fringilla metus vel facilisis vehicula.',
-            name: 'Some guy',
-            email: 'someguy@uwaterloo.ca',
-            number: '(222)123-4567',
+			details: 'Mauris nec ultricies metus. Cras et dictum justo. Nam a ullamcorper dolor. Cras fringilla metus vel facilisis vehicula.'
 		},
 		{
 			title:'Waterloo Crested Binder',
 			location: ['E5'],
             date: [0, 6],
-			details: 'Curabitur scelerisque lorem risus, in luctus orci hendrerit non. Praesent quis tellus dapibus dolor consectetur volutpat.',
-            name: 'Some guy',
-            email: 'someguy@uwaterloo.ca',
-            number: '(222)123-4567',
+			details: 'Curabitur scelerisque lorem risus, in luctus orci hendrerit non. Praesent quis tellus dapibus dolor consectetur volutpat.'
 		}
 	];
 	
@@ -76,5 +62,9 @@ angular.module('portalApp')
     
     $scope.submit = function() {
      alertService.alert("Your lost item has been added to the lost and found list.");
+   };
+    
+    $scope.plus = function() {
+     
    };
 }]);
