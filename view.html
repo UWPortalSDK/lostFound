@@ -15,6 +15,9 @@
 </script>
 
 <script type="text/ng-template" id="lostList.html">
+      <widget-search 
+             label="Search for your lost item:" >
+     </widget-search> 
     <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
         <widget-cell fill>
             <span class="itemName">{{item.title}}</span>
